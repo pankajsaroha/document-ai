@@ -1,0 +1,5 @@
+- No business logic in routes
+- No global state
+- Constructor dependency injection
+- One responsibility per class
+- Every external dependency abstracted
