@@ -11,6 +11,8 @@ class ApplicationContainer:
     """
 
     def __init__(self):
-        self.Settings = Settings()
-        self.Logger = create_logger(self.Settings)
+        self.settings = Settings()
+        self.logger = create_logger(self.settings)
         
+        #Future - will keep adding services here
+        #self.openai.client
