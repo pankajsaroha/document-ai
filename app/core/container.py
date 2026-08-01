@@ -22,6 +22,10 @@ class ApplicationContainer:
         self._banner = StartupBanner(self._settings)
         self._health_checker = HealthChecker(self._settings)
 
+        # It will be injected in the services, not Application below. Application is manage the lifecycle of Application.
+        # AI related business logic will live in dedicated services.
+        self._ai_provider = AIProviderFactory.create(self._settings)
+
         self._application = Application(
             logger=self._logger,
             settings=self._settings,
