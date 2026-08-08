@@ -29,3 +29,5 @@ class Settings(BaseSettings):
 
     openai_api_key: SecretStr | None = None # print(settings) will show open_api_key=sk-xxxxxx due to SecretStr
     openai_model: str = "gpt-5"
+
+    prompt_directory: str = "prompts"
